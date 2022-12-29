@@ -1,0 +1,9 @@
+.root{
+    -fx-background-color: #111111;
+}
+
+#GOText{
+    -fx-font-size: 65;
+    -fx-font-family: "Ink Free";
+    -fx_alignment: center;
+}
