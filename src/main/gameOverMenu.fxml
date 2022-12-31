@@ -7,11 +7,16 @@
 
 <AnchorPane fx:id="GameOverAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
    <children>
-      <Button fx:id="GameOverNewGameButton" layoutX="528.0" layoutY="406.0" mnemonicParsing="false" onAction="#setGame" prefHeight="129.0" prefWidth="297.0" text="Click for a &#10;new game" textAlignment="CENTER">
+      <Text fx:id="GOText" fill="#dd1818" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Over" textAlignment="CENTER" wrappingWidth="1300.0" />
+      <Button fx:id="GameOverNewGameButton1" layoutX="200.0" layoutY="406.0" mnemonicParsing="false" onAction="#setMainMenu" prefHeight="130.0" prefWidth="300.0" text="Main Menu" textAlignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Text fx:id="GOText" fill="#dd1818" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Over" textAlignment="CENTER" wrappingWidth="1300.0" />
+      <Button fx:id="GameOverNewGameButton11" layoutX="800.0" layoutY="406.0" mnemonicParsing="false" onAction="#setGame" prefHeight="130.0" prefWidth="300.0" text="Click for a &#10;new game" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

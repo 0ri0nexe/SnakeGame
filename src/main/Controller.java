@@ -21,29 +21,21 @@ public class Controller {
     private Stage stage;
     private Scene scene;
 
-    private Group setGrid(Group gridRoot){
-
-        for(int i=0; i<SCREEN_WIDTH/UNIT_SIZE; i++) {
-
-            Line verticalLine = new Line(i*UNIT_SIZE, 0, i*UNIT_SIZE, SCREEN_HEIGHT);
-            verticalLine.setStroke(Color.LIGHTGRAY);
-            gridRoot.getChildren().add(verticalLine);
-
-            Line horizontalLine = new Line(0, i*UNIT_SIZE, SCREEN_WIDTH, i*UNIT_SIZE);
-            horizontalLine.setStroke(Color.LIGHTGRAY);
-            gridRoot.getChildren().add(horizontalLine);
+    public final void setMainMenu(ActionEvent e){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("startMenu.fxml"));
+            stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
-        return gridRoot;
     }
 
     public void setGame(ActionEvent e){
-        Group gameRoot = new Group();
-        gameRoot = setGrid(gameRoot);
-
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        scene = new Scene(gameRoot, SCREEN_WIDTH, SCREEN_HEIGHT);
-        stage.setScene(scene);
-        stage.show();
+        Game game = new Game(e);
+        game.start();
     }
 
     public void setGameOver(ActionEvent e){

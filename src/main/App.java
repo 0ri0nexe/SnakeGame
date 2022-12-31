@@ -9,14 +9,18 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
-/**
+/*
  * JavaFX App
- */
+*/
 public class App extends Application {
 
     // screen setup
     private Stage stage = new Stage();
     private Scene scene;
+
+    public Stage getStage() {
+        return stage;
+    }
 
     private void setStage(){
         // some stage usefuls methodes :
