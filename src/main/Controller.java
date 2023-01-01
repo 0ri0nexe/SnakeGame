@@ -26,6 +26,7 @@ public class Controller {
             Parent root = FXMLLoader.load(getClass().getResource("startMenu.fxml"));
             stage = (Stage)((Node)e.getSource()).getScene().getWindow();
             scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
             stage.setScene(scene);
             stage.show();
         } catch (IOException ex) {

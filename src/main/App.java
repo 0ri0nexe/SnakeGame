@@ -43,11 +43,11 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         // set the first menu
-        Parent root = FXMLLoader.load(getClass().getResource("gameOverMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("startMenu.fxml"));
         scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         setStage();
-        
+
         // setGameScene();
         stage.show();
     }
